@@ -30,11 +30,11 @@ python json_forger.py modify <file_name> <index> name=<new_value>
 
 Create a file named `data.json` with 10 elements:
 ```sh
-python json_forger.py create data.json 10
+python json_forger.py create data 10
 ```
 
 Modify the `name` field of the element at index 2 in `data.json`:
 ```sh
-python json_forger.py modify data.json 2 name=new_name
+python json_forger.py modify data 2 name=new_name
 ```
 
