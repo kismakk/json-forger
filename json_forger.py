@@ -37,6 +37,9 @@ def create_file(args):
     """
     file_name, elements = args.file, args.elements
     
+    if ".json" not in file_name:
+        file_name = file_name + ".json"
+    
     if os.path.exists(os.path.join(WORKING_DIRECTORY, file_name)):
         raise SystemExit(f"File {file_name} already exists.")
     
@@ -71,6 +74,9 @@ def modify_file(args):
     except IndexError as ie:
         print(ie)
         raise SystemExit("Provide name by typing 'name=new_value'.")
+    
+    if ".json" not in file_name:
+        file_name = file_name + ".json"
 
     if not os.path.exists(os.path.join(WORKING_DIRECTORY, file_name)):
         raise SystemExit(f"File {file_name} doesn't exist.")
