@@ -56,7 +56,6 @@ def create_file(args):
         print(f"File {file_name} created successfully to {WORKING_DIRECTORY}.")
             
     
-
 def modify_file(args):
     """
     Modifies a JSON file by updating the value of the 'name' field at the specified index.
